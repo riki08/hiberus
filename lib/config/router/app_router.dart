@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:hiberus/cars/presentation/views/cards_view.dart';
-import 'package:hiberus/details_card/presentation/views/details_card.dart';
+import 'package:hiberus/cards/presentation/views/cards_view.dart';
+import 'package:hiberus/card_details/presentation/views/details_card.dart';
 
 final GoRouter goRouter = GoRouter(
   routes: <RouteBase>[

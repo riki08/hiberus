@@ -1,12 +1,12 @@
 class CardsModel {
-  final List<Card>? cards;
+  final List<Card1>? cards;
 
   CardsModel({
     this.cards,
   });
 
   factory CardsModel.fromMap(Map<String, dynamic> json) => CardsModel(
-        cards: json["cards"] == null ? [] : List<Card>.from(json["cards"]!.map((x) => Card.fromMap(x))),
+        cards: json["cards"] == null ? [] : List<Card1>.from(json["cards"]!.map((x) => Card1.fromMap(x))),
       );
 
   Map<String, dynamic> toMap() => {
@@ -14,10 +14,10 @@ class CardsModel {
       };
 }
 
-class Card {
+class Card1 {
   final String? name;
   final String? manaCost;
-  final int? cmc;
+  final double? cmc;
   final List<Color>? colors;
   final List<Color>? colorIdentity;
   final String? type;
@@ -45,7 +45,7 @@ class Card {
   final List<Ruling>? rulings;
   final List<String>? supertypes;
 
-  Card({
+  Card1({
     this.name,
     this.manaCost,
     this.cmc,
@@ -77,7 +77,7 @@ class Card {
     this.supertypes,
   });
 
-  factory Card.fromMap(Map<String, dynamic> json) => Card(
+  factory Card1.fromMap(Map<String, dynamic> json) => Card1(
         name: json["name"],
         manaCost: json["manaCost"],
         cmc: json["cmc"],
@@ -98,7 +98,7 @@ class Card {
         toughness: json["toughness"],
         layout: layoutValues.map[json["layout"]]!,
         multiverseid: json["multiverseid"],
-        imageUrl: json["imageUrl"],
+        imageUrl: json["imageUrl"] ?? '',
         variations: json["variations"] == null ? [] : List<String>.from(json["variations"]!.map((x) => x)),
         foreignNames: json["foreignNames"] == null
             ? []
