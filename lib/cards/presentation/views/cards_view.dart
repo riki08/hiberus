@@ -14,12 +14,8 @@ class CardsView extends StatefulWidget {
 }
 
 class _CardsViewState extends State<CardsView> {
-  late CardCubit cardCubit;
-
   @override
   void initState() {
-    cardCubit = BlocProvider.of<CardCubit>(context);
-    cardCubit.getAllCards();
     super.initState();
   }
 

@@ -12,7 +12,7 @@ abstract class Providers {
       BlocProvider(
         create: (context) => CardCubit(
           locator<CardApiRepository>(),
-        ),
+        )..getAllCards(),
       ),
       BlocProvider(
         create: (context) => DetailCardCubit(
